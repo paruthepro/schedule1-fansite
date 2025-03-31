@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 
 function Changelog() {
   const [logData, setLogData] = useState([]);
-
   useEffect(() => {
     fetch('https://raw.githubusercontent.com/paruthepro/schedule1-fansite/main/changelog.json')
       .then((res) => res.json())
