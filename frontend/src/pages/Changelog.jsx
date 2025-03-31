@@ -1,11 +1,34 @@
+import { useEffect, useState } from 'react';
+
 function Changelog() {
-    return (
-      <div className="page changelog-page">
-        <h1>Game Changelog</h1>
-        <p>See what’s new in the world of Schedule I.</p>
+  const [logData, setLogData] = useState([]);
+
+  useEffect(() => {
+    fetch('https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/changelog.json') // Replace with actual URL
+      .then((res) => res.json())
+      .then((data) => setLogData(data))
+      .catch((err) => console.error('Failed to load changelog:', err));
+  }, []);
+
+  return (
+    <div className="page changelog-page">
+      <h1>Changelog</h1>
+      <p>See what's new in Schedule 1.</p>
+
+      <div className="changelog-list">
+        {logData.map((entry, index) => (
+          <div className="changelog-entry" key={index}>
+            <h2>v{entry.version} <span className="date">({entry.date})</span></h2>
+            <ul>
+              {entry.changes.map((change, i) => (
+                <li key={i}>{change}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
-    );
-  }
-  
-  export default Changelog;
-  
+    </div>
+  );
+}
+
+export default Changelog;
