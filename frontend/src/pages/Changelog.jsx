@@ -1,7 +1,10 @@
 import { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlusCircle, faWrench, faBug } from '@fortawesome/free-solid-svg-icons';
 
 function Changelog() {
   const [logData, setLogData] = useState([]);
+
   useEffect(() => {
     fetch('https://raw.githubusercontent.com/paruthepro/schedule1-fansite/main/changelog.json')
       .then((res) => res.json())
@@ -17,31 +20,39 @@ function Changelog() {
       <div className="changelog-list">
         {logData.map((entry, index) => (
           <div className="changelog-entry" key={index}>
-            <h2>v{entry.version} <span className="date">({entry.date})</span></h2>
+            <h2>
+              v{entry.version} <span className="date">({entry.date})</span>
+            </h2>
 
-            {entry.additions && (
+            {entry.additions?.length > 0 && (
               <div className="change-group additions">
-                <h3>➕ Additions</h3>
+                <h3><FontAwesomeIcon icon={faPlusCircle} /> Additions</h3>
                 <ul>
-                  {entry.additions.map((change, i) => <li key={i}>{change}</li>)}
+                  {entry.additions.map((change, i) => (
+                    <li key={i}>{change}</li>
+                  ))}
                 </ul>
               </div>
             )}
 
-            {entry.tweaks && (
+            {entry.tweaks?.length > 0 && (
               <div className="change-group tweaks">
-                <h3>🛠 Tweaks</h3>
+                <h3><FontAwesomeIcon icon={faWrench} /> Tweaks</h3>
                 <ul>
-                  {entry.tweaks.map((change, i) => <li key={i}>{change}</li>)}
+                  {entry.tweaks.map((change, i) => (
+                    <li key={i}>{change}</li>
+                  ))}
                 </ul>
               </div>
             )}
 
-            {entry.fixes && (
+            {entry.fixes?.length > 0 && (
               <div className="change-group fixes">
-                <h3>🐛 Fixes</h3>
+                <h3><FontAwesomeIcon icon={faBug} /> Fixes</h3>
                 <ul>
-                  {entry.fixes.map((change, i) => <li key={i}>{change}</li>)}
+                  {entry.fixes.map((change, i) => (
+                    <li key={i}>{change}</li>
+                  ))}
                 </ul>
               </div>
             )}

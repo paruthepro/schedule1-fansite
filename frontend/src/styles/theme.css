@@ -286,3 +286,30 @@ body {
 .changelog-entry li::marker {
   color: #1db954;
 }
+
+.changelog-entry h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.1rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.change-group ul {
+  padding-left: 1.2rem;
+  color: #ddd;
+  margin-top: 0.5rem;
+}
+
+.change-group.additions li::marker {
+  color: #00ff88;
+}
+
+.change-group.tweaks li::marker {
+  color: #ffaa00;
+}
+
+.change-group.fixes li::marker {
+  color: #ff4d4d;
+}

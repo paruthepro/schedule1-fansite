@@ -2,9 +2,6 @@
     {
       "version": "0.3.3f13",
       "date": "2025-03-29",
-      "additions": [
-        ""
-      ],
       "tweaks": [
         "Added write permissions auto checker.",
         "Added automatic bug reporting for multiplayer join fails.",
