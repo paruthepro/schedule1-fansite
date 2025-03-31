@@ -1,23 +1,24 @@
 [
     {
-      "version": "v0.3.3f13",
-      "date": "29-03-2025",
-      "changes": [
-        "Tweaks/Improvements",
-
-            "Added write permissions auto checker.",
-            "Added automatic bug reporting for multiplayer join fails.",
-            "Added a bug report category for employees.",
-            "A bug report is now automatically submitted if it takes more than 90 seconds to load into a multiplayer game.",
-            "Product names are now made file-safe before attempting to save.",
-
-        "Bug fixes",
-            "Fixed a number of employee pathfinding bugs.",
-            "Fixed a bug involving employees sometimes not being able to place items if the destination is almost at full capacity.",
-            "Fixed vehicle trunks duplicating items.",
-            "Added a check to prevent duplicated text in the management clipboard.",
-            "Fixed a number of janky colliders in the post office.",
-            "Fixed 'I'm stuck' button not working in the prologue."
+      "version": "0.3.3f13",
+      "date": "2025-03-29",
+      "additions": [
+        ""
+      ],
+      "tweaks": [
+        "Added write permissions auto checker.",
+        "Added automatic bug reporting for multiplayer join fails.",
+        "Added a bug report category for employees.",
+        "A bug report is now automatically submitted if it takes more than 90 seconds to load into a multiplayer game.",
+        "Product names are now made file-safe before attempting to save."
+      ],
+      "fixes": [
+        "Fixed a number of employee pathfinding bugs.",
+        "Fixed a bug involving employees sometimes not being able to place items if the destination is almost at full capacity.",
+        "Fixed vehicle trunks duplicating items.",
+        "Added a check to prevent duplicated text in the management clipboard.",
+        "Fixed a number of janky colliders in the post office.",
+        "Fixed 'I'm stuck' button not working in the prologue."
       ]
     }
   ]
