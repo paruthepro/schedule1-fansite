@@ -1,0 +1,241 @@
+/* Root + Defaults */
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #0a0a0a;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background-color: #0a0a0a;
+  color: #f1f1f1;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #111;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar a {
+  color: #1db954;
+  text-decoration: none;
+}
+
+/* Footer */
+.footer {
+  padding: 1rem;
+  background-color: #111;
+  text-align: center;
+  border-top: 2px solid #1db954;
+  margin-top: 2rem;
+}
+
+/* Home Page */
+.home-page {
+  min-height: 100vh;
+  background-image: url('/src/assets/weed_leaf.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1rem;
+  overflow: hidden;
+}
+
+.home-page .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 0;
+}
+
+.home-page .content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.home-page h1 {
+  font-size: 3rem;
+  color: #00ff88;
+  text-shadow: 0 0 8px #00ff88;
+  margin-bottom: 1rem;
+}
+
+.home-page p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+
+/* Icons */
+.icon-row {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.drug-icon {
+  font-size: 3rem;
+  color: #1db954;
+  filter: drop-shadow(0 0 5px #1db954);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.drug-icon:hover {
+  transform: scale(1.2) rotate(5deg);
+  color: #0df;
+  filter: drop-shadow(0 0 8px #0df);
+}
+
+/* CTA Button */
+.start-btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  background: #1db954;
+  color: #000;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px #1db954;
+}
+
+.start-btn:hover {
+  background: #17a445;
+  box-shadow: 0 0 15px #1db954;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .home-page h1 {
+    font-size: 2rem;
+  }
+
+  .icon-row {
+    gap: 1.2rem;
+  }
+
+  .drug-icon {
+    font-size: 2.2rem;
+  }
+
+  .start-btn {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+@keyframes backgroundMove {
+  0% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 51% 49%;
+  }
+  100% {
+    background-position: 50% 50%;
+  }
+}
+
+.home-page {
+  animation: backgroundMove 15s ease-in-out infinite;
+}
+
+.game-info-page h2 {
+  color: #1db954;
+  margin-top: 2rem;
+  text-shadow: 0 0 5px #1db954;
+}
+
+.drug-info {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1rem 0 2rem;
+}
+
+.drug {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  border-radius: 12px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 0 10px #111;
+  transition: transform 0.3s ease;
+}
+
+.drug:hover {
+  transform: scale(1.05);
+}
+
+.screenshot-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.screenshot-gallery img {
+  max-width: 300px;
+  border: 2px solid #1db954;
+  border-radius: 8px;
+}
+
+.page {
+  padding: 2rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.game-info-page h1 {
+  font-size: 2.5rem;
+  color: #00ff88;
+  text-shadow: 0 0 8px #00ff88;
+  margin-bottom: 1rem;
+}
+
+.roadmap-page h1 {
+  font-size: 2.5rem;
+  color: #00ff88;
+  text-shadow: 0 0 8px #00ff88;
+  margin-bottom: 1rem;
+}
+
+.roadmap-page p {
+  margin-bottom: 2rem;
+  color: #ccc;
+}
+
+.trello-wrapper {
+  overflow: hidden;
+  border-radius: 10px;
+  max-width: 100%;
+}
