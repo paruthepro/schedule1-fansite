@@ -4,7 +4,7 @@ function Changelog() {
   const [logData, setLogData] = useState([]);
 
   useEffect(() => {
-    fetch('https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/changelog.json') // Replace with actual URL
+    fetch('https://raw.githubusercontent.com/paruthepro/schedule1-fansite/main/changelog.json') // Replace with actual URL
       .then((res) => res.json())
       .then((data) => setLogData(data))
       .catch((err) => console.error('Failed to load changelog:', err));
