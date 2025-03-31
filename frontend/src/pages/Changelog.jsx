@@ -26,7 +26,7 @@ function Changelog() {
 
             {entry.additions?.length > 0 && (
               <div className="change-group additions">
-                <h3><FontAwesomeIcon icon={faPlusCircle} /> Additions</h3>
+                <h3><center><FontAwesomeIcon icon={faPlusCircle} /> Additions</center></h3>
                 <ul>
                   {entry.additions.map((change, i) => (
                     <li key={i}>{change}</li>
@@ -37,7 +37,7 @@ function Changelog() {
 
             {entry.tweaks?.length > 0 && (
               <div className="change-group tweaks">
-                <h3><FontAwesomeIcon icon={faWrench} /> Tweaks</h3>
+                <h3><center><FontAwesomeIcon icon={faWrench} /> Tweaks</center></h3>
                 <ul>
                   {entry.tweaks.map((change, i) => (
                     <li key={i}>{change}</li>
@@ -48,7 +48,7 @@ function Changelog() {
 
             {entry.fixes?.length > 0 && (
               <div className="change-group fixes">
-                <h3><FontAwesomeIcon icon={faBug} /> Fixes</h3>
+                <h3><center><FontAwesomeIcon icon={faBug} /> Fixes</center></h3>
                 <ul>
                   {entry.fixes.map((change, i) => (
                     <li key={i}>{change}</li>
